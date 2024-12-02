@@ -13,6 +13,8 @@ public class NumberGeneratorService {
     @Autowired
     NumberGeneratorRepo numberGeneratorRepo;
 
+    // Purpose: Provides an interface for the controller or other application components to request a list of generated numbers
+    // Delegation: Passes the numsToGenerate parameter to the repository and directly returns the result
     public List<String> getNumbers(int numsToGenerate) throws IOException{
         return numberGeneratorRepo.getNumbers(numsToGenerate);
     }
